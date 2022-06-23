@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet"href="testregcss.css">
+        <script>
+        function validateform()
+        {  
+            var name=document.getElementById("name").value;
+            var date=document.getElementById("date").value;  
+            var gender1=document.getElementById("female");
+            var gender2=document.getElementById("male");
+            var address=document.getElementById("address").value;
+            var city=document.getElementById("city").value;
+            var pincode=document.getElementById("pincode").value;
+            var state=document.getElementById("state").value; 
+            var country=document.getElementById("country").value;
+            var mobileno=document.getElementById("mobileno").value;
+            var email=document.getElementById("email").value;
+            
+            if (name==""){  
+            alert("Name can't be blank");  
+            return false;
+            }
+            else if( date==""){  
+            alert("date can't be blank");  
+            return false; 
+            }  
+            else if(( gender1.checked==true) && (gender2.checked==true)){
+            return false; 
+            }
+            else if(( gender1.checked==false) && (gender2.checked==false)){
+            alert("Gender is not selected");
+            return false;
+            }
+            else if ( address==""){
+            alert("address can't be blank");
+            return false;
+            }
+            else if ( city==""){
+            alert("city can't be blank");
+            return false;
+            }
+            else if ( pincode==""){
+            alert("pincode can't be blank");
+            return false;
+            }    
+            else if ( state==""){
+            alert("state can't be blank");
+            return false;
+            }
+            else if ( country==""){
+            alert("country can't be blank");
+            return false;
+            }
+            else if ( mobileno==""){
+            alert("mobileno can't be blank");
+            return false;
+            }
+            else if ( email==""){
+            alert("email can't be blank");
+            return false;
+            }
+            
+             return true;
+               
+        }
+        function redirect()
+        {
+            alert("Registration successfull")
+            window.location.href = 'success.html';
+            
+        }
+
+ 
+        </script> 
+        </head>
+        <body>  
+        <form name="myform" method="post" action="success.html" onsubmit="return validateform()" >
+        <table width="50%" bgcolor="white" align="center"style="padding: 20px;margin-top: 40px"> 
+            <tr>
+                <td align="center" colspan="2">
+                    <h2>Client Registration Form</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Name</p><input type="text" name="name" id="name">  
+                </td>
+                <td>
+                    <p>Dob</p> <input type="date" name="date"id="date">
+                </td>
+            </tr>   
+            <tr>
+                <td>
+                    <p>Gender</p> <input type="radio" name="gender"id="female" value="female">Female
+                            <input type="radio" name="gender"id="male" id="male" >Male
+                </td>
+                <td>
+                    <p>Address</p><input type="text" name="address" placeholder="Current address"id="address">
+                </td>
+            </tr>  
+            <tr>
+                <td>
+                    <p>City</p><input type="text" name="city"id="city">
+                </td>
+                <td>
+                    <p>Pincode</p><input type="text" name="pincode" id="pincode">
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                    <p>State</p><input type="text" name="state"id="state" >
+                </td>
+                <td>
+                    <p>Country</p><input type="text" name="country "id="country">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Mobile no</p><input type="text" name="mobileno" id="mobileno"id="mobileno">
+                </td>
+                <td>
+                    <p>E-mail</p><input type="email" name="email" id="email"id="email">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:20px" align="right">
+                    <input type="Reset" value="Clear"  style="width:80px;height:30px;border:none;border-radius:20px;background-color:rgb(160, 218, 198)">
+                </td>
+                <td>
+                    <input type="submit" value="register" style="width:80px;height:30px;border:none;border-radius:20px;background-color:rgb(160, 218, 198)"> 
+                </td>
+            </tr> 
+        </table>
+        </form>  
+        </body>
+</html>

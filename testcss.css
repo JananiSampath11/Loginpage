@@ -1,0 +1,18 @@
+body{
+    background-color:rgb(248, 169, 73);
+}
+.main{
+    background-color:rgb(218, 179, 132);
+    
+}
+.top{
+    height:100px;
+    background-color: rgb(75, 78, 80);
+    color:white;
+    padding:10px;
+    text-align:center;
+}
+.login{
+    height:500px;
+    padding-top: 40px;
+}
